@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    border-radius: 20px;
+
+    height: 100%;
+    object-fit: cover;
+}
+
+body {
+    width: 90%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    height: 600px;
+    overflow: hidden;
+}
+
+ul {
+    height: 100%;
+    width: 700%;
+    display: flex;
+    transition: all 1s ease;
+}
+
+li {
+    flex-basis: 100%;
+    list-style: none;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1.2rem;
+}
+
+button:first-of-type {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+button:last-of-type {
+    position: absolute;
+    right: 10px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.indicators {
+    display: flex;
+    gap: 10px;
+    /* transform: translateY(-200%); */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+    background-color: gainsboro;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.indicators .indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.indicators .indicator.active {
+    background: transparent;
+    border: 1px solid black;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+ 
+    
+    .container {
+        height: 400px;
+        /* Adjust height for smaller devices */
+    }
+
+
+
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        width: 95%;
+        display: flex;
+        align-items: start;
+        padding: 50px 0;
+        /* margin: 0 auto;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative; */
+        background-color: thistle;
+    }
+
+    .container {
+        height: 300px;
+        /* Adjust height for even smaller devices */
+    }
+
+    button:first-of-type {
+        position: absolute;
+        left: 30%;
+        top: 70%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    button:last-of-type {
+        position: absolute;
+        right: 30%;
+        top: 70%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .indicators {
+        top: 80%;
+        height: 40px;
+        /* background-color: gainsboro;
+        padding: 8px;
+        border-radius: 10px; */
+    }
+}
